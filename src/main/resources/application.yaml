@@ -28,3 +28,15 @@ server:
   port: 8080
   servlet:
     context-path: /main
+
+# Swagger Setting
+springdoc:
+  packages-to-scan: org.main.vitalview
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
+  cache:
+    disabled: true
+  swagger-ui:
+    enabled: true
+    tags-sorter: alpha
+    operations-sorter: alpha
