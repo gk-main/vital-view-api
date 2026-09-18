@@ -1,9 +1,9 @@
 package org.main.vitalview.dashboard.service;
 
 import org.main.vitalview.dashboard.dto.DashboardResDto;
-import org.main.vitalview.global.response.ApiResponse;
+import org.main.vitalview.global.response.CommonResponse;
 
 public interface DashboardService {
 
-    ApiResponse<DashboardResDto> getVitals();
+    CommonResponse<DashboardResDto> getVitals();
 }

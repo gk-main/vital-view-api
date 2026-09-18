@@ -2,7 +2,7 @@ package org.main.vitalview.dashboard.service;
 
 import lombok.RequiredArgsConstructor;
 import org.main.vitalview.dashboard.dto.DashboardResDto;
-import org.main.vitalview.global.response.ApiResponse;
+import org.main.vitalview.global.response.CommonResponse;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class DashboardServiceImpl implements DashboardService {
 
     @Override
-    public ApiResponse<DashboardResDto> getVitals() {
+    public CommonResponse<DashboardResDto> getVitals() {
         return null;
     }
 }
