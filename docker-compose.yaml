@@ -1,0 +1,32 @@
+services:
+#  vital-view-db:
+#    image: mariadb:latest
+#    container_name: vital-view-db
+#    restart: always
+#    environment:
+#      MYSQL_ROOT_PASSWORD: root
+#      MYSQL_DATABASE: vital_view
+#      MYSQL_USER: root
+#      MYSQL_PASSWORD: root
+#    ports:
+#      - "3306:3306"
+#    networks:
+#      - vital-net
+
+  vital-view-api:
+    build: .
+    image: vital-view-api-image
+    container_name: vital-view-api
+    restart: on-failure
+    ports:
+      - "8090:8090"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mariadb://vital-view-db:3306/vital_view
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    networks:
+      - vital-view-net
+
+networks:
+  vital-view-net:
+    external: true
